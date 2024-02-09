@@ -37,13 +37,13 @@ body {
   background-size: cover;
 }
 
-<!-- Feature secture custom css ------------>
+<!-- Feature secture css ------------>
 .feature-icon-small {
   width: 3rem;
   height: 3rem;
 }
 
-<!-- Template page custom css START ------------->
+<!-- Template page css START ------------->
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -120,5 +120,5 @@ body {
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
 }
-<!-- Template page custom css END ------------->
+<!-- Template page css END ------------->
 
