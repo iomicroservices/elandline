@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/5569fb4b4a.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+  </head>
+  <body>
+
+    <!--  navbar  -->
+    <div id="nav-bar"></div>
+    <script src="../components/header.html"></script> <! use ../components/etc when loaded from non-root directory>
+
+    
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="../components/footer.html"></script> <! use ../components/etc when loaded from non-root directory>
+
+    
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script>
+      // Load header template
+      fetch('../components/header.html')
+          .then(response => response.text())
+          .then(html => document.getElementById('nav-bar').innerHTML = html);
+      // Load footer template
+      fetch('../components/footer.html')
+          .then(response => response.text())
+          .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
+
+    
+  </body>
+</html>
