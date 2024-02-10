@@ -1,41 +1,33 @@
+<!--old html-- 
 <div id="nav-bar">
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="/assets/img/logo.png" style="width: 150px; height: auto;" alt=""></a> <!--update the alt text--->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
   </nav>
-</div>
+</div>-->
+  
+<div id="nav-bar">   
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://library.livecanvas.com/sections/">
+			<img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" width="38" height="38" class="align-middle me-1 img-fluid" alt="My Website">
+			My Site</a>
 
-<!-- Custom CSS -->
-<link rel="stylesheet" href="/assets/css/style.css">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar3" aria-controls="myNavbar3" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+
+		<div class="lc-block collapse navbar-collapse" id="myNavbar3">
+			<div lc-helper="shortcode" class="live-shortcode ms-auto"> <!--  lc_nav_menu -->
+        <ul id="menu-menu-1" class="navbar-nav">
+          <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739">
+            <a href="https://library.livecanvas.com/starters" class="nav-link ">BS5 Page Templates</a>
+          </li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738"><a href="https://library.livecanvas.com/sections/" class="nav-link ">BS5 Snippets</a></li>
+          </ul> <!-- /lc_nav_menu -->
+        </div>
+			<div class="lc-block ms-auto d-grid gap-2 d-lg-block"><a class="btn link-secondary" href="#" role="button">Sign in</a>
+				<a class="btn btn-primary" href="#" role="button">Sign up</a>
+			</div>
+		</div>
+	</div>
+</nav>
