@@ -11,11 +11,11 @@ body {
     padding: 0;
 }
 
-<!--hero css START-->
+/* HERO css START */
 @media (min-width: 992px) {
   .rounded-lg-3 { border-radius: .3rem; }
 }
-<!--hero css END-->
+/* HERO css END */
 
 .feature-icon {
   width: 4rem;
@@ -40,7 +40,7 @@ body {
 }
 
 
-<!--Template page css START------->
+/* TEMPLATE page START */
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -117,5 +117,4 @@ body {
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
 }
-<!-- Template page css END ------------->
-
+/* TEMPLATE page END*/
