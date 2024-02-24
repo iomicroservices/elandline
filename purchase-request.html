@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+
+    <title>Purchase Request | createnumbers.com</title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="createnumbers.com">
+    <meta name="description"
+        content="You are a step closer to buying the mobile number you always wanted. Complete secure checkout to get connected.">
+    <meta name="generator" content="JAMStack">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!---SEO Optimisation-->
+    <meta name="keywords" content="purchase numbers, buy mobile numbers, get mobile numbers"> <!---SEO Optimisation-->
+    <link rel="canonical" href="https://createnumbers.com/purchase-request">
+    <meta name="robots" content="index, nofollow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.createnumbers.com/purchase-request">
+    <meta property="og:title" content="Create Numbers - Purchase Request">
+    <meta property="og:description"
+        content="You are a step closer to buying the mobile number you always wanted. Complete secure checkout to get connected.">
+    <meta property="og:image" content="https://www.createnumbers.com/assets/images/logo-icon.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.createnumbers.com/purchase-request">
+    <meta property="twitter:title" content="Create Numbers - Purchase Request">
+    <meta property="twitter:description"
+        content="You are a step closer to buying the mobile number you always wanted. Complete secure checkout to get connected.">
+    <meta property="twitter:image" content="https://www.createnumbers.com/your-image.jpg">
+
+    <!-- Dark mode -->
+    <script>
+        const storedTheme = localStorage.getItem('theme')
+
+        const getPreferredTheme = () => {
+            if (storedTheme) {
+                return storedTheme
+            }
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+        }
+
+        const setTheme = function (theme) {
+            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-bs-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme', theme)
+            }
+        }
+
+        setTheme(getPreferredTheme())
+
+        window.addEventListener('DOMContentLoaded', () => {
+            var el = document.querySelector('.theme-icon-active');
+            if (el != 'undefined' && el != null) {
+                const showActiveTheme = theme => {
+                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                        element.classList.remove('active')
+                    })
+
+                    btnToActive.classList.add('active')
+                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+                }
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+                        setTheme(getPreferredTheme())
+                    }
+                })
+
+                showActiveTheme(getPreferredTheme())
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', () => {
+                            const theme = toggle.getAttribute('data-bs-theme-value')
+                            localStorage.setItem('theme', theme)
+                            setTheme(theme)
+                            showActiveTheme(theme)
+                        })
+                    })
+
+            }
+        })
+
+    </script>   
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/color.css">
+
+</head>
+
+<body>
+
+    <!-- Pre loader START -->
+    <div class="preloader">
+        <div class="preloader-item">
+            <div class="spinner-grow text-primary"></div>
+        </div>
+    </div>
+    <!-- Pre loader END -->
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Call checkout -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const number = params.get('number');
+            const ref = params.get('ref');
+
+            fetch(`/checkout?number=${encodeURIComponent(number)}&ref=${encodeURIComponent(ref)}`)
+                .then(response => response.json()) // Parse the JSON response
+                .then(data => {
+                    if (data.redirectUrl) {
+                        // Use window.location.href to redirect the user
+                        window.location.href = data.redirectUrl;
+                    } else {
+                        console.error('Redirect URL not received.');
+                        // Handle failure
+                    }
+                })
+                .catch(error => console.error('Fetch error:', error));
+        });
+    </script>
+
+</body>
+</html>

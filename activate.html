@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+
+	<title>Activate your SIM | createnumbers.com</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="createnumbers.com">
+	<meta name="description" content="Pop in your activation code and follow the quick, easy steps to activate your SIM.">
+	<meta name="generator" content="JAMStack">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!---SEO Optimisation-->
+	<meta name="keywords" content="create numbers, custom numbers, mobile numbers"> <!---SEO Optimisation-->
+	<link rel="canonical" href="https://createnumbers.com/activate">
+	<meta name="robots" content="index, follow">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.createnumbers.com/activate">
+	<meta property="og:title" content="Activate your SIM | createnumbers.com">
+	<meta property="og:description" content="Pop in your activation code and follow the quick, easy steps to activate your SIM.">
+	<meta property="og:image" content="https://www.createnumbers.com/assets/images/logo-icon.svg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://www.createnumbers.com/activate">
+	<meta property="twitter:title" content="Activate your SIM | createnumbers.com">
+	<meta property="twitter:description" content="Pop in your activation code and follow the quick, easy steps to activate your SIM.">
+	<meta property="twitter:image" content="https://www.createnumbers.com/assets/images/logo-icon.svg">
+
+	<!-- Structured data TO BE ENTERED -->
+
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+ 
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+
+		setTheme(getPreferredTheme())
+
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+
+			showActiveTheme(getPreferredTheme())
+
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+
+			}
+		})
+		
+	</script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="/assets/vendor/glightbox/css/glightbox.css">
+	
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/color.css">
+
+
+</head>
+
+<body>
+
+<!-- Pre loader START -->
+<div class="preloader">
+	<div class="preloader-item">
+		<div class="spinner-grow text-primary"></div>
+	</div>
+</div>
+<!-- Pre loader END -->
+
+<!-- Header START -->
+<header class="header-sticky header-absolute">
+	<!-- nav bar ----------------------------------------------->
+	<nav id="nav-bar" class="navbar navbar-expand-xl">
+		<div class="container">
+			<!-- Logo START -->
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item" src="/assets/images/logo.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="/assets/images/logo-light.svg" alt="logo">
+			</a>
+			<!-- Logo END -->
+	
+			<!-- Buttons -->
+			<ul class="nav align-items-center dropdown-hover ms-sm-2">
+
+				<!-- Start now button -->
+				<li class="nav-item d-none d-sm-block">
+					<a href="#activationForm" class="btn btn-sm btn-warning mb-0" role="button">Activate SIM</a>
+				</li>
+				<!-- Responsive navbar toggler -->
+				<li class="nav-item">
+					<button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-animation">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main Banner START -->
+<section class="bg-dark pt-sm-8 pb-9" data-bs-theme="dark">
+	<div class="container pt-4 pt-sm-0">
+		<!-- Hero START -->
+		<div class="row g-4 g-xxl-5">
+			<!-- Hero content START -->
+			<div class="col-lg-8">
+				<!-- Title -->
+				<h1 class="mb-0 lh-base">Let's activate your shiny new SIM !</h1>
+				<p class="mb-0 mt-4">Get connected in an instant. Submit the activation code printed on your SIM to get started. Check your email once submitted for more information.</p>
+			</div>
+			<!-- Hero content END -->
+
+			<!-- List -->
+			<div class="col-lg-4 col-xl-3 ms-auto position-relative">
+				<!-- List -->
+				<ul class="list-group list-group-borderless mb-4">
+					<li class="list-group-item d-flex heading-color pb-0"><i class="bi bi-patch-check text-primary me-2"></i>Submit your activation code</li>
+					<li class="list-group-item d-flex heading-color pb-0"><i class="bi bi-patch-check text-primary me-2"></i>Connected within minutes</li>
+					<li class="list-group-item d-flex heading-color pb-0"><i class="bi bi-patch-check text-primary me-2"></i>Secure verification process</li>
+					<li class="list-group-item d-flex heading-color pb-0"><i class="bi bi-patch-check text-primary me-2"></i>Easy, quick and convenient</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Hero END -->
+	</div>
+</section>
+<!-- =======================
+Main Banner END -->
+
+<!-- =======================
+Activation & form START -->
+<section class="pt-4 pb-0 mt-n8">
+	<div class="container">
+		<div class="row">
+			<!-- Quote -->
+			<div class="col-lg-4">
+				<div class="card card-body overflow-hidden bg-primary">
+					<img src="assets/images/custom/activate-sim.png">
+				</div>
+			</div>
+
+			<!-- Activation form -->
+			<div class="col-lg-8 position-relative ms-auto ps-xl-6 mt-6">
+				<!-- Card -->
+				<div id="formContainer" class="card card-body shadow border p-sm-5">
+			
+					<form id="activationForm" class="row g-4">
+						<div class="col-md-6">
+							<label class="form-label heading-color">Activation code *</label>
+							<input id="code" type="text" class="form-control form-control-lg" placeholder="On your giffgaff SIM" required  oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');" maxlength="6">
+							<span id="codeError" class="error"></span>
+						</div>
+			
+						<div class="col-md-6">
+							<label class="form-label heading-color">Email address *</label>
+							<input id="email" type="email" class="form-control form-control-lg" required placeholder="Must be your order email">
+							<span id="emailError" class="error"></span>
+						</div>				
+						<!-- Button -->
+						<button id="submitCode" class="btn btn-lg btn-warning mb-0">Submit</button>
+					</form>
+
+					<!-- Success message once form submitted -->
+					<div id="successCover"
+						class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center rounded-3 px-3 bg-dark d-none">
+						<i class="bi bi-check-circle-fill text-success" style="font-size: 48px;"></i>
+						<p class="mt-3 text-light">Thank you - please check your email for more info.
+						</p>
+						<button id="submitAnother" class="btn btn-warning">Make another submission</button>
+					</div>
+
+				</div>
+			</div>
+		</div> <!-- Row END -->
+	</div>
+</section>
+<!-- =======================
+Activation & form END -->
+
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- =======================
+Footer START -->
+<footer id="footer"></footer>
+<script src="/components/footer.html"></script>
+<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"></div>
+
+<!-- Bootstrap JS -->
+<script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Vendors-->
+<script src="/assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Theme Functions -->
+<script src="/assets/js/functions.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Component Functions -->
+<script>
+	// Load footer template
+	fetch('/components/footer.html')
+		.then(response => response.text())
+		.then(html => document.getElementById('footer').innerHTML = html);
+</script>
+
+<!-- Form validation and submission START -->
+<script>
+	$(document).ready(function () {
+		$("#activationForm").submit(function (e) {
+			e.preventDefault(); // Always prevent the default submission to handle it via JavaScript
+
+			var email = $("#email").val();
+			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			var code = $("#code").val();
+			var isValid = true;
+
+			// Reset error messages
+			$("#emailError").text("");
+			$("#codeError").text("");
+
+			// Email validation
+			if (!emailReg.test(email)) {
+				$("#emailError").text("Invalid Email");
+				isValid = false;
+			}
+
+			// Activation code validation
+			if (code.length < 6) {
+				$("#codeError").text("Must contain at least 6 characters");
+				isValid = false;
+			}
+
+			if (isValid) {
+				$("#submitCode").prop('disabled', true).text("Processing...");
+
+				fetch('/activation', {
+					method: 'POST',
+					body: new FormData(this),
+				})
+					.then(response => {
+						// Regardless of the actual JSON response, show the success message
+						if (response.ok) {
+							// HTTP response status 200-299 indicates success
+							$('#formContainer').addClass('position-relative');
+							$('#successCover').removeClass('d-none'); // Unhide the success message
+						} else {
+							// You can handle HTTP error statuses here
+							console.error('Submission failed');
+						}
+						$("#submitCode").prop('disabled', false).text("Activate my number");
+					})
+					.catch(error => {
+						// Handle network errors
+						console.error('Error:', error);
+						$("#submitCode").prop('disabled', false).text("Activate my number");
+					});
+			}
+		});
+
+		$('#submitAnother').click(function () {
+			$('#successCover').addClass('d-none'); // Hide the success message
+			$('#activationForm').trigger("reset"); // Reset the form for another submission
+		});
+	});
+</script>
+<!-- Form validation and submission end -->
+
+</body>
+</html>

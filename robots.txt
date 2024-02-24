@@ -1,0 +1,19 @@
+# robots.txt for https://www.createnumbers.com/
+
+# Section for all robots
+User-agent: *
+Disallow: /assets/
+Disallow: /console/
+Disallow: /functions/
+
+# Sitemap URL
+Sitemap: https://www.createnumbers.com/sitemap.xml
+
+# Delay between successive requests
+# Crawl-Delay: 10
+
+# Blocking access to specific file types
+Disallow: /*.css$
+Disallow: /*.js$
+
+# End of robots.txt
